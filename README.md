@@ -21,7 +21,7 @@ TwitterApp is a simple web application for posting and viewing tweets. Users can
 1. Clone the repository:
 
 	```bash
-	git clone <repository-url>
+	git clone https://github.com/ivanjocc/project_nodejs.git
 2. Clone the repository:
 
 	```bash
