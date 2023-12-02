@@ -1,0 +1,13 @@
+extends layout
+
+block style
+  link(rel="stylesheet", href="/styles/createTweet.css")
+
+block content
+  h2 Create a New Tweet
+
+  // Form to create a new tweet
+  form(action='/tweets', method='POST')
+    label(for='content') Tweet content:
+    textarea(name='content', rows='4', required=true)
+    button(type='submit') Create Tweet

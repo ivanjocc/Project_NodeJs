@@ -1,0 +1,31 @@
+extends layout
+
+block style
+  link(rel="stylesheet", href="/styles/register.css")
+
+block content
+  h2 Welcome to TwitterApp
+
+  if message
+    // Show flash messages
+    p.message= message
+
+  // Registration form
+  form(action="/users/register", method="post")
+    label(for="username") Username:
+    input(type="text", id="username", name="username", required)
+
+    label(for="email") Email:
+    input(type="email", id="email", name="email", required)
+
+    label(for="password") Password:
+    input(type="password", id="password", name="password", required)
+
+    label(for="confirmPassword") Confirm Password:
+    input(type="password", id="confirmPassword", name="confirmPassword", required)
+
+    button(type="submit") Register
+
+  // Link to login
+  p Already have an account? 
+    a(href="/users/login") Login here.

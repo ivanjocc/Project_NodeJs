@@ -1,0 +1,40 @@
+extends layout
+
+block style
+  link(rel="stylesheet", href="/styles/timeline.css")
+
+block content
+  h2 Welcome to TwitterApp
+
+  if user
+    // Display the username if the user is logged in
+    p Welcome, #{user.username}!
+
+    // Show a welcome message if there are tweets
+    if tweets.length > 0
+      p Start exploring tweets!
+
+    else
+      p No tweets at the moment!
+
+    // Link to create a new tweet
+    a(href='/tweets/create', class='button') Create a Tweet
+
+    br 
+    
+    // Link to logout
+    a(href='/users/logout', class='button') Logout
+
+  else
+    // Show a welcome message if not logged in
+    p Log in or register to join the conversation.
+
+  // List of tweets
+  if tweets.length > 0
+    each tweet in tweets
+      .tweet
+        p= tweet.content
+        p Posted by: #{tweet.user.username}
+
+  else
+    p No tweets at the moment.

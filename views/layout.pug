@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title TwitterApp
+    link(rel="icon", type="images/png", href="/images/favicon.ico")
+    link(rel="stylesheet", href="/styles/main.css")
+    block style
+    script(src="/js/main.js")
+  body
+    header
+      a(href="/")
+        img(src="/images/logo.png", alt="Logo")
+      //- h1 TwitterApp
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/users/register") Register
+          li
+            a(href="/users/login") Login
+    main
+      block content
+    //- footer
+    //-   p © 2023 TwitterApp
